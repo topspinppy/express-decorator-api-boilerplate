@@ -1,0 +1,76 @@
+{
+  "name": "express-decorator-api-boilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src",
+  "scripts": {
+    "start": "nodemon ./src/bootstrap.js",
+    "clean": "rm -rf build && mkdir build",
+    "build": "npm run clean && babel -d ./build ./src -s --source-maps inline"
+  },
+  "author": "topspinppy",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ],
+      [
+        "@babel/plugin-transform-regenerator",
+        {
+          "asyncGenerators": false,
+          "generators": false,
+          "async": false
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-export-default-from": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.9.0",
+    "@babel/polyfill": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
+    "@babel/register": "^7.9.0",
+    "@babel/runtime": "^7.9.2",
+    "body-parser": "^1.19.0",
+    "bunyan": "^1.8.12",
+    "chalk": "^4.0.0",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "express-decorator-router": "^0.1.1",
+    "express-decorators": "^1.2.1",
+    "glob": "^7.1.6",
+    "http-graceful-shutdown": "^2.3.2",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.9",
+    "morgan": "^1.10.0",
+    "npm-run-all": "^4.1.5",
+    "randomstring": "^1.1.5",
+    "rimraf": "^3.0.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-regenerator": "^7.8.7",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.3.0",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslit": "^6.0.0",
+    "jest-cli": "^25.3.0",
+    "nodemon": "^2.0.3"
+  }
+}
