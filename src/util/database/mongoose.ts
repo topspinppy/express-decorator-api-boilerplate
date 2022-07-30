@@ -1,7 +1,7 @@
-import mongoose from 'mongoose'
-import logger from '../logger/logger'
+import * as mongoose from 'mongoose'
+import logger from '../logger'
 
-export default (uri, options) =>
+export default (uri: string, options: mongoose.CallbackWithoutResult) =>
   new Promise((resolve, reject) => {
     mongoose.connection
       .on('error', (error) => reject(error))

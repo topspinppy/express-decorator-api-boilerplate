@@ -1,6 +1,6 @@
 import morgan from 'morgan'
 
-const logging = morgan(function (tokens, req, res) {
+const logging = morgan((tokens, req, res) => {
   return [
     tokens.method(req, res),
     tokens.url(req, res),
@@ -11,4 +11,4 @@ const logging = morgan(function (tokens, req, res) {
 })
 
 
-module.exports = logging
+export default logging

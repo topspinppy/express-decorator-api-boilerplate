@@ -1,5 +1,7 @@
-import 'dotenv/config'
-import path from 'path'
+import * as dotenv from 'dotenv'
+import * as path from 'path'
+
+dotenv.config()
 
 const config = {
   all: {
@@ -7,7 +9,7 @@ const config = {
     root: path.join(__dirname, '..'),
     port: process.env.PORT || 9000,
     mongo: {
-      uri: process.env.DB_URI,
+      uri: process.env.DB_URI || '',
       options: {
         useUnifiedTopology: true,
         useNewUrlParser: true,
