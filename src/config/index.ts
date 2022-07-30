@@ -5,6 +5,7 @@ dotenv.config()
 
 const config = {
   all: {
+    appName: process.env.APP_NAME,
     env: process.env.NODE_ENV || 'development',
     root: path.join(__dirname, '..'),
     port: process.env.PORT || 9000,

@@ -4,8 +4,8 @@
   "description": "",
   "main": "src",
   "scripts": {
-    "dev": "ts-node-dev ./src/bootstrap.ts | bunyan",
-    "start": "node build/bootstrap.js",
+    "dev": "ts-node-dev ./src/app.ts | ./node_modules/.bin/bunyan",
+    "start": "node build/bootstrap.ts",
     "clean": "rm -rf build && mkdir build",
     "build": "npx tsc"
   },
@@ -24,7 +24,7 @@
     "@decorators/express": "^2.6.0",
     "@decorators/socket": "^3.2.0",
     "body-parser": "^1.19.0",
-    "bunyan": "^1.8.12",
+    "bunyan": "^1.8.15",
     "chalk": "^4.0.0",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",

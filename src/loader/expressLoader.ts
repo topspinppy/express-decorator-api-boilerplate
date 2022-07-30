@@ -1,5 +1,5 @@
 import bodyParser from "body-parser";
-import express, { application, Express } from "express";
+import express, { Express } from "express";
 import { register } from "../util/registerRoute";
 import { MicroframeworkLoader, MicroframeworkSettings } from "microframework";
 import path from "path";
@@ -20,6 +20,6 @@ export const expressLoader: MicroframeworkLoader = (settings: MicroframeworkSett
   register(app, path.resolve(__dirname, "../controllers"), '.controller.ts')
 
   app.listen(config.all.port, () => {
-    logger.info({ event: 'server-running', message: `Server listening on port ${config.all.port}`})
+    logger.info({ event: 'expressLoader', message: `Server listening on port ${config.all.port}`})
   })
 }

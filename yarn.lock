@@ -2043,7 +2043,7 @@
     "base64-js" "^1.3.1"
     "ieee754" "^1.1.13"
 
-"bunyan@^1.8.12":
+"bunyan@^1.8.15":
   "integrity" "sha512-0tECWShh6wUysgucJcBAoYegf3JJoZWibxdqhTm7OHPeT42qdjkZ29QCMcKwbgU1kiH+auSIasNRXMLWXafXig=="
   "resolved" "https://registry.npmjs.org/bunyan/-/bunyan-1.8.15.tgz"
   "version" "1.8.15"
