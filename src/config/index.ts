@@ -11,11 +11,6 @@ const config = {
     port: process.env.PORT || 9000,
     mongo: {
       uri: process.env.DB_URI || '',
-      options: {
-        useUnifiedTopology: true,
-        useNewUrlParser: true,
-        useCreateIndex: true
-      }
     }
   },
   test: { },

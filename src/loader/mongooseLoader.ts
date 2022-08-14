@@ -5,7 +5,7 @@ import logger from "../util/logger";
 
 
 export const mongooseLoader: MicroframeworkLoader = (settings: MicroframeworkSettings | undefined) => {
-  mongoose.connect(config.all.mongo.uri, config.all.mongo.options).then((value: typeof mongoose) => {
+  mongoose.connect(config.all.mongo.uri).then(() => {
     logger.info({ event: 'mongooseLoader', message: `Connect mongodb database successfully`})
   })
 }
