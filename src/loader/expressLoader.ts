@@ -17,7 +17,6 @@ export const expressLoader: MicroframeworkLoader = (settings: MicroframeworkSett
   }))
 
   const fileType = envIs.isNot('production') ? '.controller.ts' : '.controller.js'
-  /* Register route */
   register(app, path.resolve(__dirname, "../controllers"), fileType)
 
   app.listen(config.all.port, () => {
