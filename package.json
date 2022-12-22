@@ -35,7 +35,7 @@
     "express-decorators": "^1.2.1",
     "glob": "^7.1.6",
     "http-graceful-shutdown": "^2.3.2",
-    "jsonwebtoken": "^8.5.1",
+    "jsonwebtoken": "^9.0.0",
     "microframework": "^0.6.4",
     "mongoose": "^6.5.2",
     "morgan": "^1.10.0",
